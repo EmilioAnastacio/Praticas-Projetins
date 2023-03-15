@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+
+       Estado estado = new Estado("Parana", "PR", Regiao.Sul, new ArrayList<Cidade>());
+
+       Cidade cidade1 = new Cidade("Foz do Iguacu", 500000);
+       Cidade cidade2 = new Cidade("Cascavel", 300000);
+       Cidade cidade3 = new Cidade("Ceu Azul", 30000);
+
+       estado.addCidade(cidade1);
+       estado.addCidade(cidade2);
+       estado.addCidade(cidade3);
+
+        System.out.println("Estado: " + estado.getNome());
+        System.out.println("Sigla: " + estado.getSigla());
+        System.out.println("Regiao: " + estado.getRegioes());
+        System.out.println("Lista cidades: ");
+
+        //Esse for aqui eu lembrei por conta de uns metodos que eu fazia em c# queria ver se era a mesma pira, e
+        //descobri que era kkkk <3. é feio, mas eu lembreikks;
+        
+        for (Cidade cidade: estado.getCidades()){
+            System.out.println(cidade.getnome() + "- Populacao: " + cidade.getPopulacao());
+        }
+    }
+}

@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Estado {
+
+    private long id;
+    private String nome;
+    private String sigla;
+    private Regiao regioes;
+    private List<Cidade> cidades = new ArrayList<Cidade>();
+
+    public Estado(String nome, String sigla, Regiao regioes, List<Cidade> cidades){
+
+        this.nome = nome;
+        this.sigla = sigla;
+        this.regioes = regioes;
+        this.cidades = cidades;
+    }
+
+    public void addCidade(Cidade cidades){
+        this.cidades.add(cidades);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getSigla() {
+        return sigla;
+    }
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public Regiao getRegioes() {
+        return regioes;
+    }
+    public void setRegioes(Regiao regioes) {
+        this.regioes = regioes;
+    }
+
+    public List<Cidade> getCidades() {
+        return cidades;
+    }
+    public void setCidades(List<Cidade> cidades) {
+        this.cidades = cidades;
+    }
+}
